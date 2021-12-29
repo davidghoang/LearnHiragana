@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+The character is {{character}}
+
+<style>
+.button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+
+<div>
+    {% for value in options %}
+    <a class="button" href="/hiragana/{{character}}/{{value}}">{{value}}</a>
+    {% endfor %}
+</div>
+</body>
+</html>
