@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
+    <title>Results</title>
+</head>
+<style>
     .button {
     background-color: #4CAF50; /* Green */
     color: white;
@@ -12,12 +13,18 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-}
+    margin: 4px 2px;
+    }
 </style>
-</head>
 <body>
-
-{{result}}
-<a class="button" href="/hiragana/">Try again?</a>
+    <center>
+        <h1>{{result}}</h1>
+        <div>
+            <a class="button" href="/">Homepage</a>
+        </div>
+        <div>
+            <a class="button" href="/hiragana/">Next question</a>
+        </div>
+    </center>
 </body>
 </html>

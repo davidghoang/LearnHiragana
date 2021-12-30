@@ -20,7 +20,16 @@ def hiragana(request):
 def quiz_character(request, character):
     template = loader.get_template('website/hiragana/quiz_character.html')
 
-    options = hiragana_table.values()
+    correct_option = hiragana_table[character]
+
+    hiragana_table_without_answer = []
+    for key in hiragana_table:
+        if key != character:
+            hiragana_table_without_answer.append(hiragana_table[key])
+
+    # hiragana_table_without_answer = {key: hiragana_table[key] for key in hiragana_table if key != character}
+    options = random.sample(hiragana_table_without_answer, 3)
+    options.insert(random.randint(0, len(options)), correct_option)
 
     context = {
         'character': character,
@@ -34,12 +43,14 @@ def check_answer(request, character, submission):
     template = loader.get_template('website/hiragana/quiz_result.html')
 
     if hiragana_table[character] == submission:
-        result = "You are correct"
+        result = "You are correct!"
     else:
-        result = "You are wrong"
+        result = "You are wrong."
 
     context = {
         'result': result,
     }
     return HttpResponse(template.render(context, request))
+
+
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Question</title>
+    <title>Homepage</title>
 </head>
 <style>
 .button {
@@ -18,14 +18,8 @@
 </style>
 <body>
     <center>
-        <h2>The character is:</h2>
-        <h1>{{character}}</h1>
-
-        <div>
-            {% for value in options %}
-            <a class="button" href="/hiragana/{{character}}/{{value}}">{{value}}</a>
-            {% endfor %}
-        </div>
+        <h1>Learn Hiragana</h1>
+        <a class="button" href="/hiragana/">Begin</a>
     </center>
 </body>
 </html>
