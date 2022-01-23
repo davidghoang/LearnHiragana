@@ -1,1 +1,1 @@
-web: gunicorn LearnHiragana.wsgi
+web: gunicorn website.wsgi
