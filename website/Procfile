@@ -1,1 +1,1 @@
-web: gunicorn LearnHiragana.wsgi:application -- log-file - --log-level debug
+web: gunicorn website.wsgi -- log-file -
