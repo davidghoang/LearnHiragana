@@ -34,6 +34,16 @@
   color: white;
   border-radius: 12px;
 }
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 </style>
 <body bgcolor="#222222">
     <center>
@@ -42,5 +52,32 @@
         </div>
         <a class="button button1" href="/hiragana/">Begin</a>
     </center>
+
+<div class="row">
+    <div class="column">
+        <h2>Column 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus
+eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
+tortor sed accumsan convallis.</p>
+    </div>
+
+    <div class="column">
+        <h2>Column 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus
+eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
+tortor sed accumsan convallis.</p>
+    </div>
+
+    <div class="column">
+        <h2>Column 3</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna.
+Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus
+eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque
+tortor sed accumsan convallis.</p>
+    </div>
+
+</div>
 </body>
 </html>
